@@ -153,7 +153,7 @@
  lastName:'Kyaw',
  fullName:'Htin Kyaw',
  email:'htinkyaw@gmail.com',
- locationg:'Myanmar,Shan State,Taunggyi,MA 333',
+ location:'Myanmar,Shan State,Taunggyi,MA 333',
  isMarried:'will come',
  hoppies:['hiking','cooking','walking'],
  age:21,
@@ -161,50 +161,51 @@
  framework:['laravel','django','node js framework'],
  socialMedia:[
        {
-       facebook_account:'https:://www.facebook.com/profile.php?id=333332fjae',
+       facebook_account:'https:://www.facebook.com/profile.php?id=333332fjae'
        },
        {
-       twitter_account:'https:://www.twitter.com/htinkyaw',
+       twitter_account:'https:://www.twitter.com/htinkyaw'
       }
  ],
  date:Date()
  })
 
- db.persons.insert({
+
+ db.users.insert({
  name:'htin kyaw',
  country:'Myanmar or Burma',
  nationality:'Myanmar',
  ethic group:'Pa Oh',
  isMarried:'still single now',
  job:'not finding yet',
- hoppies:['hiking','swing','sleeping'],
+ hoppies:['hiking','swwing','sleeping'],
  livesCity:'PinLanung',
  address:'SP 2222',
  age:21,
  lattop:'asus',
  sociaLinks:[
       {
-          facebooks:'www.facebook.com/profile.php?htinkyaw',
+          facebooks:'www.facebook.com/profile.php?htinkyaw'
       },
       {   
-          twitter:'www.twitter.com/htinkyaw',
+          twitter:'www.twitter.com/htinkyaw'
       },
       {    
-          github:'www.github.com/htinkyaw760',
+          github:'www.github.com/htinkyaw760'
       },
       {    
-          linken:'www.linend.com/profile/eeww',
+          linken:'www.linend.com/profile/eeww'
       },
       {    
-          pin:'www.pin/htinkyaw'    
+          pin:'www.pin/htinkyaw'   
       },
       {
-         webDesign:'html,css,javascript,bootstrap',
+         webDesign:'html,css,javascript,bootstrap'
       },
       {   
-         server site:'python,php,django,laravel'
+         serversite:'python,php,django,laravel'
       }
- ]
+ ],
  date:Date()
 })
 
