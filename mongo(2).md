@@ -145,6 +145,8 @@ db.authors.insertMany([
     }
 ])
 
+db.books.aggregate([{$lookup: {from:'author',localField:'author',foreignField:'_id',as:'creators'}}]).pretty()
+
 ---------------------------------------
 _______________________________________
 
@@ -163,4 +165,16 @@ db.users.insertMany([
     }
 ])
 
+db.posts.insertOne({
+ title:'this is pose one',
+ text:'hello lorme is not a really',
+ category:'books collection',
+ tags:['lords of the rings,the hobbits'],
+ creator:ObjectId("600f647ea465e3f98c2cf047"),
+ comments:[
+    {
+      text:'awesome comments',
+      author:ObjectId("600f647ea465e3f98c2cf047")
+    }
+ ]})
 ```

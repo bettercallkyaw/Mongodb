@@ -57,6 +57,8 @@
 
   ]);
 
+  db.posts.count()
+  
   db.posts.find()
 
   db.posts.find().pretty()
@@ -155,7 +157,7 @@
  email:'htinkyaw@gmail.com',
  location:'Myanmar,Shan State,Taunggyi,MA 333',
  isMarried:'will come',
- hoppies:['hiking','cooking','walking'],
+ hobbies:['hiking','cooking','walking'],
  age:21,
  language:['php','javascript','python','sql','mongodb'],
  framework:['laravel','django','node js framework'],
@@ -165,7 +167,7 @@
        },
        {
        twitter_account:'https:://www.twitter.com/htinkyaw'
-      }
+       }
  ],
  date:Date()
  })
@@ -178,14 +180,14 @@
  ethic group:'Pa Oh',
  isMarried:'still single now',
  job:'not finding yet',
- hoppies:['hiking','swwing','sleeping'],
+ hobbies:['hiking,swwing,sleeping'],
  livesCity:'PinLanung',
  address:'SP 2222',
  age:21,
  lattop:'asus',
  sociaLinks:[
       {
-          facebooks:'www.facebook.com/profile.php?htinkyaw'
+          facebook:'www.facebook.com/profile.php?htinkyaw'
       },
       {   
           twitter:'www.twitter.com/htinkyaw'
@@ -206,6 +208,9 @@
          serversite:'python,php,django,laravel'
       }
  ],
+ address:{
+   street:'Ma 44'
+ },
  date:Date()
 })
 
