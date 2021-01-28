@@ -39,8 +39,9 @@ db.persons.insertMany([
     }
 ])
 
-WRITE ERRORS
 -------------------------------------------------
+WRITE ERRORS
+
 db.persons.insert([
     {
         name:'htin kyaw',
