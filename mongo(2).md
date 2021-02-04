@@ -1,5 +1,8 @@
 ```bash
 
+# One To One
+# one paitents has one disease summary,a disease summary belongs to one patient
+
 use hospital
 
 db.patients.insertOne({
@@ -34,7 +37,8 @@ db.patients.insertOne({
 
 ---------------------------------------
 _______________________________________
-
+# One To One
+# one person has one car,a car belongs to one person 
 use carData
 
 db.persons.insertOne({
@@ -51,6 +55,8 @@ db.persons.insertOne({model:'BMW',price:444444,owner:ObjectId("5f46377385fcb1e50
 
 ---------------------------------------
 _______________________________________
+# One To Many
+# one thread has many answers,one answer belongs to one question thread
 
 use support
 
@@ -76,6 +82,9 @@ db.answers.insertMany([
 
 ---------------------------------------
 _______________________________________
+# One To Many
+
+# one city has many citizens,one citizen belongs to one city
 
 use cityData
 
@@ -95,6 +104,9 @@ db.citizens.insertMany([
 ---------------------------------------
 _______________________________________
 
+# Many To Many
+# one customer has many products(via orders),a product belongs to many customers
+
 use shop
 
 db.products.insert({car:'BWM',price:444444})
@@ -110,6 +122,8 @@ db.customers.updateOne({},
 
 ---------------------------------------
 _______________________________________
+# Many To Many
+# one book has many authors,an author belongs to many books
 
 use bookRegistry
 
@@ -177,4 +191,5 @@ db.posts.insertOne({
       author:ObjectId("600f647ea465e3f98c2cf047")
     }
  ]})
+ 
 ```

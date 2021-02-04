@@ -180,7 +180,7 @@
  ethic group:'Pa Oh',
  isMarried:'still single now',
  job:'not finding yet',
- hobbies:['hiking,swwing,sleeping'],
+ hobbies:['hiking','swwing','sleeping'],
  livesCity:'PinLanung',
  address:'SP 2222',
  age:21,
