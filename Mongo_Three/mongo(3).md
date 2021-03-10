@@ -207,7 +207,13 @@ db.persons.find({age: {$exists: true}}).pretty()
 
 db.persons.find({age: {$exists: false}}).pretty()
 
+db.persons.find({age:{$exists:true}}).sort({name:1}).pretty().limit(1)
+
 db.persons.find({age: {$exists: true,$ne: null}}).pretty()
+
+db.persons.find({name:{$type: "string"}}).pretty()
+
+db.persons.find({age:{$type: "number"}}).pretty()
 
 db.persons.find({phone: {$type: "number"}}).pretty()
 
@@ -215,7 +221,21 @@ db.sales.find({$expr: {$gt: ["volume","target"]}}).pretty()
 
 db.sales.find({$expr: {$gt: ["$volume","$target"]}}).pretty()
 
-db.sales.find({$expr: {$gt: [{$cond: {if: {$gte: ["$volume",190]},then: {$subtract: ["$volume",10]},else: "$volume"}}, "$target"]}}).pretty()
+db.sales.find({
+    $expr:{
+        $gt:[
+            {
+                $cond:{
+                    if:{$gte:["$volume",190]},
+                    then:{$subtract:["$volume",10]},
+                    else:
+                    "$volume"
+                }
+            },
+            "$target"
+        ]
+    }
+}).pretty()
 
 db.persons.find({"hobbies.title": "sports"}).pretty()
 
@@ -227,9 +247,7 @@ db.persons.find({$and: [{"hobbies.title": "Sports"},{"hobbies.frequency":{$gte: 
 
 db.persons.find({hobbies: {$elemMatch: {title:"Sports",frequency: {$gte: 3}}}}).pretty()
 
-db.persons.find({$and:[{"hobbies.title":"Sports"},{"hobbies.frequency":{$gte:3}}]}).pretty()
-
-db.persons.find({hobbies:{$elemMatch:{title:"Sports",frequency:{$gte:3}}}}).pretty()
+db.persons.find({$and:[{"hobbies.title": "Sports"},{"hobbies.frequency":{$gte:3}}]}).pretty()
 
 db.persons.find({"hobbies.frequency":{$gt:2}}).count()
 ---------------------------------------------------------------------------

@@ -109,15 +109,13 @@
 
   db.posts.createIndex({title:'text'})
 
-  db.posts.find({
-    $text:{
-      $search:"\"Post O\""
-    }
-  })
-  
+  db.posts.find({$text:{$search:"\"Title O\""}}).pretty()
+ 
   db.posts.update({title:'Post Two Updated'},{$set:{views:1000}})
 
   db.posts.find({views:{$gt:6}}).pretty()
+
+  db.posts.find({views:{$gte:6}}).pretty()
 
   db.products.insertOne({_id:1,name:"Pen",price:4.4})
 
@@ -185,29 +183,15 @@
  address:'SP 2222',
  age:21,
  lattop:'asus',
- sociaLinks:[
-      {
-          facebook:'www.facebook.com/profile.php?htinkyaw'
-      },
-      {   
-          twitter:'www.twitter.com/htinkyaw'
-      },
-      {    
-          github:'www.github.com/htinkyaw760'
-      },
-      {    
-          linken:'www.linend.com/profile/eeww'
-      },
-      {    
-          pin:'www.pin/htinkyaw'   
-      },
-      {
-         webDesign:'html,css,javascript,bootstrap'
-      },
-      {   
-         serversite:'python,php,django,laravel'
-      }
- ],
+ sociaLinks:{
+          facebook:'www.facebook.com/profile.php?htinkyaw',
+          twitter:'www.twitter.com/htinkyaw',
+          github:'www.github.com/htinkyaw760',
+          linken:'www.linend.com/profile/eeww', 
+          pin:'www.pin/htinkyaw',
+          webDesign:'html,css,javascript,bootstrap',
+          serversite:'python,php,django,laravel'
+ },
  address:{
    street:'Ma 44'
  },
